@@ -22,6 +22,7 @@ class CreateEventsTable extends Migration
             $table->string('location')->nullable();
             $table->text('description')->nullable();
             $table->integer('user_id')->unsigned();
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
 
             $table->index('user_id');
